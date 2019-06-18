@@ -1,0 +1,66 @@
+.carousel-fade {
+    height: 300px;
+    transition-property: opacity;
+}
+    .carousel-inner {
+        height: 300px;
+        transition-property: opacity;
+    }
+        .item {
+            height: 300px;
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+
+    .carousel-control {
+        z-index: 2;
+    }
+
+
+
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 300px;
+}
+
+.item:nth-child(1) {
+    background-color: red;
+  //  background-image: url(/assets/img/programming.jpg);
+}
+
+.item:nth-child(2) {
+    background-color: green;
+   // background-image: url(/assets/img/dataScience.jpg);
+}
+
+.item:nth-child(3) {
+    background-color: blue;
+   // background-image: url(/assets/img/SQLQuery.jpeg);
+}
+
+#wowslider-container1{
+    color: white;
+}

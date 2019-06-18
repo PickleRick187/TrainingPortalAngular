@@ -1,0 +1,119 @@
+@import "~animate.css/animate.css";
+
+
+.carousel-item{
+ 
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  z-index: -10;
+}
+
+#bg-btn > ul{
+    margin-left: 15%;
+}
+
+
+ul > li {
+    float: left;
+    list-style: none;
+    padding-left: 10%;
+}
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+}
+
+.item:nth-child(1) {
+    background: #74C390;
+}
+
+.item:nth-child(2) {
+    background: #51BCE8;
+}
+
+.item:nth-child(3) {
+    background: #E46653;
+}
+
+strong{
+    text-shadow: 3px 2px 5px black;
+}
+
+.bg-content{
+    margin-top: 80px;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.carousel-control-prev {
+    left: -78px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: -305px;
+    
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #B41318;
+    border-color: #dc3545;
+}

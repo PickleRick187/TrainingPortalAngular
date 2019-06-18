@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": [],
+            "scripts": [
+    
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -86,7 +89,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/wowjs/dist/wow.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~animate.css/animate.css";
+
+body{
+    background: -webkit-linear-gradient(right, #0d1218, #0d1218fa);
+    margin-top: 0%;
+    padding: 0%;
+    padding-top: 0%;
+}
+
+.course-info{
+    padding: 6%;
+}

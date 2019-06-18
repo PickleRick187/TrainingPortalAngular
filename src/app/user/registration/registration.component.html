@@ -1,0 +1,122 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<div class=" register">
+  <div class="row fadeIn animated">
+    <div class="col-md-3 register-left">
+      <h3>Welcome <br> TO</h3>
+      <div class="zoomIn animated">
+          <img id="left-logo"  src="/assets/img/EohLogo.png" alt="" />
+      </div>
+    </div>
+    
+    <div class="col-md-9 register-right">
+      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">Register</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="col-md-5 mx-auto mt-5">
+            <img id="prof-img" style="height: 10%; width:25%;" src="/assets/img/Custom-Icon-Design-Silky-Line-User-User-man-add.ico"
+              alt="" />
+            <h3 class="">Login</h3>
+          </div>
+ 
+          <div class="row register-form">
+            <div class="mx-auto  col-md-5">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" value="" />
+              </div>
+
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" value="" />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <input type="submit" class="btnRegister" value="Login" />
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade show fadeIn animated" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+          <div class="col-md-5 mx-auto mt-5">
+            <img id="user-icon" src="/assets/img/Custom-Icon-Design-Silky-Line-User-User-man-add.ico" alt="" />
+            <h3 class="">Register Student</h3>
+          </div>
+
+          <div class="row register-form">
+            <div class="col-md-6">
+
+
+              <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+
+                <div class="form-group required">
+                  <label>UserName </label>
+                  <input class="form-control" type="text" formControlName="UserName">
+                  <label class="text-danger"
+                    *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">This
+                    field is mandatory</label>
+                </div>
+
+                <div class="form-group required">
+                  <label>Email</label>
+                  <input class="form-control" type="text" formControlName="Email">
+                  <label class="text-danger"
+                    *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email">Invalid
+                    email address </label>
+                </div>
+
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input class="form-control" type="text" formControlName="FullName">
+                  <hr>
+
+                  <div formGroupName="Passwords">
+                    <div class="form-group required">
+                      <label>Password</label>
+                      <input class="form-control" type="password" formControlName="Password">
+                      <label class="text-danger"
+                        *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">This
+                        field is mandatory</label>
+                      <label class="text-danger"
+                        *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">Minimum
+                        4 characters</label>
+                    </div>
+
+                    <div class="form-group required">
+                      <label>Confirm Password</label>
+                      <input class="form-control" type="password" formControlName="ConfirmPassword">
+                      <label class="text-danger"
+                        *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.required">This
+                        field is mandatory </label>
+                      <label class="text-danger"
+                        *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMisMatch">Confirm
+                        Password does not match </label>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <input type="submit" class="btnRegister" [disabled]="!service.formModel.valid" value="Register" />
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
